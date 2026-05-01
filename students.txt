@@ -1,22 +1,22 @@
 Project: Food Ordering Website - Eastern Food Restaurant
 Course: IWB201
-
+Site URL: https://hasdeve34.github.io/abaq-alsharq-restaurant/
 Students:
 
 1)
-Arabic Name: Õ”‰ «·Õ”‰
+Arabic Name: √ç√ì√§ √á√°√ç√ì√§
 University ID: 204645
 Class: C6
 Student Code: hasan_204645_C6
 
 2)
-Arabic Name: „—Ì„ Ã«„⁄
+Arabic Name: √£√ë√≠√£ √å√á√£√ö
 University ID: 323904
 Class: C6
 Student Code: mariaam_323904_C6
 
 3)
-Arabic Name: ÌÊ”› ‰⁄„…
+Arabic Name: √≠√¶√ì√ù √§√ö√£√â
 University ID: 311354
 Class: C6
 Student Code: yousef_311354_C6
