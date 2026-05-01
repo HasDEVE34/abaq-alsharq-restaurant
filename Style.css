@@ -1,0 +1,680 @@
+/* Style.css */
+/* Theme colors are stored in variables to keep the design consistent */
+:root {
+  --primary-color: #6D1A1A;
+  --secondary-color: #D9A441;
+  --background-color: #FFF4E0;
+  --card-color: #FFFDF8;
+  --text-color: #2E1A12;
+  --button-color: #C85A1E;
+  --button-hover: #A94718;
+  --border-color: #E6CFA7;
+  --muted-color: #6f5a4a;
+  --table-hover-color: rgba(217, 164, 65, 0.18);
+  --input-bg: #ffffff;
+  --input-text: #2E1A12;
+  --soft-box-bg: rgba(217, 164, 65, 0.12);
+}
+
+/* Global page style */
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  padding-top: 76px;
+  opacity: 0;
+  transition: opacity 0.35s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body.page-loaded {
+  opacity: 1;
+}
+
+/* Dark mode values */
+body.dark-mode {
+  --primary-color: #2B1111;
+  --secondary-color: #F0C36A;
+  --background-color: #17110F;
+  --card-color: #261A17;
+  --text-color: #FFF2DC;
+  --button-color: #D86424;
+  --button-hover: #F0782E;
+  --border-color: #7A5140;
+  --muted-color: #E8CFAF;
+  --table-hover-color: rgba(240, 195, 106, 0.16);
+  --input-bg: #33231F;
+  --input-text: #FFF2DC;
+  --soft-box-bg: rgba(240, 195, 106, 0.12);
+}
+
+/* Navbar */
+.custom-navbar {
+  background: linear-gradient(90deg, var(--primary-color), #8A2B1D);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.brand-link {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.35rem;
+  letter-spacing: 0.3px;
+}
+
+.custom-navbar .nav-link {
+  color: #fff !important;
+  margin-inline: 0.25rem;
+  border-radius: 999px;
+  padding-inline: 0.95rem !important;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  background: var(--secondary-color);
+  color: #2E1A12 !important;
+}
+
+/* Main page sections */
+.page-section {
+  padding-block: 48px;
+}
+
+.hero-section {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(rgba(109, 26, 26, 0.84), rgba(46, 26, 18, 0.78)),
+    radial-gradient(circle at top left, #D9A441, transparent 28%),
+    var(--primary-color);
+  color: #fff;
+}
+
+.main-title {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.main-subtitle {
+  color: #fff5df;
+  max-width: 720px;
+}
+
+.hero-card {
+  background: rgba(255, 253, 248, 0.95);
+  color: #2E1A12;
+  padding: 2rem;
+  border-radius: 24px;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+.hero-card h2 {
+  color: #6D1A1A;
+  font-weight: bold;
+}
+
+/* Dark mode hero card */
+body.dark-mode .hero-card {
+  background: #2F211C;
+  color: var(--text-color);
+  border-color: var(--secondary-color);
+}
+
+body.dark-mode .hero-card h2 {
+  color: var(--secondary-color);
+}
+
+/* Inner page header */
+.inner-page-header {
+  padding: 72px 0;
+  background:
+    linear-gradient(rgba(109, 26, 26, 0.88), rgba(109, 26, 26, 0.88)),
+    var(--primary-color);
+  color: #fff;
+  text-align: center;
+}
+
+.inner-page-header h1 {
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+/* Shared content card */
+.content-card {
+  background: var(--card-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px rgba(109, 26, 26, 0.08);
+}
+
+.section-heading {
+  margin-bottom: 1.2rem;
+}
+
+.section-heading h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 0.45rem;
+}
+
+.section-heading p {
+  color: var(--muted-color);
+  margin-bottom: 0;
+}
+
+body.dark-mode .section-heading h2 {
+  color: var(--secondary-color);
+}
+
+/* Bootstrap warning badge adjustment */
+.text-bg-warning {
+  color: #2E1A12 !important;
+}
+
+/* Tables */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text-color);
+  --bs-table-border-color: var(--border-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.table td,
+.table th {
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.students-table thead th {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+}
+
+.students-table td {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.students-table tbody tr:hover {
+  background: var(--table-hover-color);
+}
+
+/* Dark mode table fixes */
+body.dark-mode .table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text-color);
+  --bs-table-hover-color: var(--text-color);
+  --bs-table-hover-bg: var(--table-hover-color);
+}
+
+body.dark-mode .table td,
+body.dark-mode .table th {
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+body.dark-mode .students-table thead th,
+body.dark-mode .meals-table thead th,
+body.dark-mode .invoice-table thead th {
+  background: #3A1714;
+  color: #FFF2DC;
+}
+
+/* Buttons */
+.main-btn {
+  background: var(--button-color);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.35rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.main-btn:hover {
+  background: var(--button-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 999px;
+  padding: 0.65rem 1.35rem;
+}
+
+.secondary-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+body.dark-mode .secondary-btn {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+body.dark-mode .secondary-btn:hover {
+  background: var(--secondary-color);
+  color: #2E1A12;
+}
+
+/* Shared form input style */
+.custom-input,
+.form-control,
+.form-select {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 0.7rem 0.85rem;
+  color: var(--input-text);
+}
+
+.custom-input:focus,
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.18rem rgba(217, 164, 65, 0.25);
+}
+
+.custom-input::placeholder,
+.form-control::placeholder {
+  color: #8f7660;
+}
+
+body.dark-mode .custom-input::placeholder,
+body.dark-mode .form-control::placeholder {
+  color: #C9A98D;
+}
+
+body.dark-mode .form-select option {
+  background: #33231F;
+  color: #FFF2DC;
+}
+
+/* Feature boxes */
+.feature-box {
+  height: 100%;
+  background: var(--soft-box-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.feature-box h3 {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+body.dark-mode .feature-box h3 {
+  color: var(--secondary-color);
+}
+
+/* Dish preview cards */
+.dish-preview-card {
+  height: 100%;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  background: linear-gradient(180deg, var(--soft-box-bg), transparent);
+  border-radius: 18px;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dish-preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(109, 26, 26, 0.12);
+}
+
+.dish-preview-card h3 {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+body.dark-mode .dish-preview-card h3 {
+  color: var(--secondary-color);
+}
+
+/* Contact boxes */
+.info-box {
+  height: 100%;
+  background: var(--soft-box-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.info-box h3 {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+body.dark-mode .info-box h3 {
+  color: var(--secondary-color);
+}
+
+/* Developer cards */
+.developer-card {
+  height: 100%;
+  padding: 1.3rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--soft-box-bg), transparent);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.developer-card h3 {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.developer-card span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--muted-color);
+  font-size: 0.95rem;
+}
+
+body.dark-mode .developer-card h3 {
+  color: var(--secondary-color);
+}
+
+/* Links and helper boxes */
+a {
+  color: var(--button-color);
+}
+
+a:hover {
+  color: var(--button-hover);
+}
+
+body.dark-mode a {
+  color: #F0C36A;
+}
+
+body.dark-mode a:hover {
+  color: #FFD98A;
+}
+
+.publish-link-box {
+  background: var(--soft-box-bg);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px dashed var(--secondary-color);
+}
+
+/* Modal */
+.custom-modal {
+  background: var(--card-color);
+  color: var(--text-color);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+  border-color: var(--border-color);
+}
+
+.reservation-message {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+body.dark-mode .reservation-message {
+  color: var(--secondary-color);
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1) grayscale(100%);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.site-footer h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.footer-small {
+  color: #f4d9aa;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Scroll-to-top button */
+#scrollTopBtn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: var(--button-color);
+  color: #fff;
+  font-size: 1.35rem;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#scrollTopBtn:hover {
+  background: var(--button-hover);
+  transform: translateY(-3px);
+}
+
+/* Meals page styles */
+.filter-note {
+  background: var(--soft-box-bg);
+  border: 1px dashed var(--secondary-color);
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  color: var(--muted-color);
+}
+
+/* Meals table */
+.meals-table thead th {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.meals-table td {
+  text-align: center;
+  vertical-align: middle;
+  color: var(--text-color);
+}
+
+.meals-table tbody tr.meal-row:hover {
+  background: var(--table-hover-color);
+}
+
+.meal-img {
+  width: 86px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.meal-details-row {
+  display: none;
+}
+
+.meal-details-box {
+  text-align: right;
+  background: var(--soft-box-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.meal-details-box h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.meal-details-box ul {
+  margin-bottom: 0;
+}
+
+body.dark-mode .meal-details-box h3 {
+  color: var(--secondary-color);
+}
+
+.meal-details-img {
+  width: 100%;
+  max-height: 170px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+}
+
+.hidden-section {
+  display: none;
+}
+
+/* Required label marker */
+.required-label::after {
+  content: " *";
+  color: #d00000;
+  font-weight: bold;
+}
+
+body.dark-mode .required-label::after {
+  color: #ff8a8a;
+}
+
+/* Form validation messages */
+.form-errors {
+  display: none;
+  background: rgba(208, 0, 0, 0.08);
+  border: 1px solid rgba(208, 0, 0, 0.35);
+  color: #a10000;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.form-errors ul {
+  margin-bottom: 0;
+}
+
+.form-text {
+  color: var(--muted-color);
+}
+
+body.dark-mode .form-errors {
+  color: #FFD1D1;
+  background: rgba(255, 80, 80, 0.10);
+  border-color: rgba(255, 150, 150, 0.45);
+}
+
+/* Invoice table */
+.invoice-table thead th {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+}
+
+.invoice-table td {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.invoice-summary {
+  background: var(--soft-box-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.invoice-summary p {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.invoice-summary p:last-child {
+  margin-bottom: 0;
+  color: var(--primary-color);
+}
+
+body.dark-mode .invoice-summary p:last-child {
+  color: var(--secondary-color);
+}
+
+/* Bootstrap component contrast fixes */
+.alert,
+.card,
+.modal-content,
+.dropdown-menu {
+  color: var(--text-color);
+}
+
+body.dark-mode .alert,
+body.dark-mode .card,
+body.dark-mode .dropdown-menu {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 56px 0;
+  }
+
+  .content-card {
+    padding: 1rem;
+  }
+
+  .main-title {
+    font-size: 2.25rem;
+  }
+
+  .meal-img {
+    width: 72px;
+    height: 56px;
+  }
+
+  .meals-table {
+    font-size: 0.9rem;
+  }
+}
